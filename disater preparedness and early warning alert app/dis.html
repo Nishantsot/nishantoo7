@@ -1,0 +1,73 @@
+
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Disaster Warning App</title>
+      <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+
+      <link rel="stylesheet" href="dis.css" />
+    </head>
+    <body>
+      <header>
+        <h1>🌍 Disaster Warning & Prep App</h1>
+        <p>Get early alerts & stay prepared</p>
+      </header>
+    
+      <main>
+        <section class="location">
+          <button onclick="getLocation()">📍 Use My Location</button>
+          <p id="location"></p>
+        </section>
+    
+        <section id="weather-alerts">
+          <h2>⚠️ Weather Alerts</h2>
+          <div id="alerts-box">Click the button above to fetch alerts</div>
+        </section>
+    
+        <section id="prep-checklist">
+          <h2>✅ Emergency Checklist</h2>
+          <ul>
+            <li><input type="checkbox" /> Emergency kit ready</li>
+            <li><input type="checkbox" /> First aid supplies</li>
+            <li><input type="checkbox" /> Water & food for 3 days</li>
+            <li><input type="checkbox" /> Flashlight & batteries</li>
+            <li><input type="checkbox" /> Copies of important documents</li>
+          </ul>
+        </section>
+        <section id="disaster-type">
+            <h2>🌀 Choose Disaster Type</h2>
+            <select id="disaster-select" onchange="loadChecklist()">
+              <option value="flood">Flood</option>
+              <option value="earthquake">Earthquake</option>
+              <option value="fire">Fire</option>
+            </select>
+          </section>
+          
+          <section id="prep-checklist">
+            <h2>✅ Emergency Checklist</h2>
+            <ul id="checklist-items"></ul>
+          </section>
+          
+          <section id="emergency-contacts">
+            <h2>📞 Emergency Contacts</h2>
+            <ul>
+              <li><strong>Police:</strong> 100</li>
+              <li><strong>Fire:</strong> 101</li>
+              <li><strong>Ambulance:</strong> 102</li>
+            </ul>
+          </section>
+          
+          <section>
+            <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+          </section>
+      </main>
+      
+      
+    
+      <script src="dis.js"></script>
+    </body>
+    </html>
+    
