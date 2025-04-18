@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSnap - Carbon Tracker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="eco.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌱 EcoSnap</h1>
+    <p>Track your daily carbon footprint!</p>
+
+    <form id="carbonForm">
+      <label>Travel (km by car):</label>
+      <input type="number" id="travel" min="0" />
+
+      <label>Electricity Use (kWh):</label>
+      <input type="number" id="electricity" min="0" />
+
+      <label>Meat Meals (per day):</label>
+      <input type="number" id="meat" min="0" />
+
+      <button type="submit" class="btn btn-outline-warning">Calculate</button>
+    </form>
+
+    <div id="result" class="result-box hidden" a>
+      <h2>Your Daily Carbon Footprint</h2>
+      <p><span id="footprint"></span> kg CO₂</p>
+      <p class="tip" id="tip"></p>
+    </div>
+  </div>
+
+  <script src="eco.js"></script>
+</body>
+</html> 
+
+
