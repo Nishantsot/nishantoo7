@@ -16,7 +16,7 @@ const MealLog = ({ meals, onDelete }) => {
             <strong>{meal.food_name}</strong>: {meal.nf_calories} cal, {meal.nf_protein}g protein
             {/* Delete button */}
             <button onClick={() => onDelete(idx)} style={{ marginLeft: "10px", color: "red" }}>
-              ❌
+              
             </button>
           </div>
         ))
